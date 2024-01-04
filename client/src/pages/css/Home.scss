@@ -1,1 +1,22 @@
-
+*{
+    margin: 0;
+}
+h1{
+    text-align: center;
+    margin: 0px 0px 25px 0;
+}
+.categories{
+    text-align: center;
+}
+.categories div {
+    height: 14em;
+}
+.item-list{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style: none;
+}
+.item-list li{
+    
+}
