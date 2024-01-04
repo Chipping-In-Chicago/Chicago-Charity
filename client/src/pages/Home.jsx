@@ -1,6 +1,6 @@
 import "./css/Home.scss";
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <h1>Location 1 Current Item List:</h1>
@@ -34,5 +34,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;
