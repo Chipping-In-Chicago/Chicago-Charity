@@ -47,4 +47,4 @@ input LocationInput {
   address: String
 }
 `;
-model.exports = typeDefs;
+module.exports = typeDefs;

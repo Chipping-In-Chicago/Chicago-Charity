@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('./models');
+const { User } = require('../models');
 
 const secret = 'your-secret-key';
 
