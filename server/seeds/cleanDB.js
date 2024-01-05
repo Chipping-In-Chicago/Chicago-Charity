@@ -1,17 +1,27 @@
 const mongoose = require('mongoose');
-const { User, Item, Location } = require('./models');
+const models = require('../models');
+const db = require('../config/connection');
 
-const cleanDB = async () => {
+const cleanDB = async (modelName, collectionName) => {
   try {
-    await User.deleteMany({});
-    await Item.deleteMany({});
-    await Location.deleteMany({});
-    console.log('Database cleaned successfully.');
-  } catch (error) {
-    console.error('Error cleaning database:', error.message);
+    await db;
+
+    const model = models[modelName];
+
+    if (model) {
+      console.log(`Model ${modelName} found.`);
+      await mongoose.connection.dropDatabase();
+
+      console.log(`Database dropped successfully.`);
+    } else {
+      console.error(`Model ${modelName} not found.`);
+    }
+  } catch (err) {
+    console.error(`Error cleaning database:`, err.message);
+    throw err;
   } finally {
     mongoose.connection.close();
   }
 };
 
-cleanDB();
+module.exports = cleanDB;
