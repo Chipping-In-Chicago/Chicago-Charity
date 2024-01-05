@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import './footer.scss'
+import Login from '../../pages/Login'
 
 export default function Footer() {
     return (
-        <div className="footer">
-            <Link to='/login'>I need to help</Link>
-        </div>
+        <footer className="footer">
+            <button onClick={Login}> I need to help </button>
+        </footer>
 
     )
 }
