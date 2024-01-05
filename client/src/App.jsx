@@ -8,34 +8,14 @@ import Footer from './components/Footer';
 function App() {
   return (
     < >
-      <div className="flex-column justify-center align-center min-100-vh bg-primary">
-        <Navbar />
-        <div className='container'>
-        <Outlet />
-        </div>
-        <Footer />
-      </div>
+      <Navbar />
+
+      <Outlet />
+
+      <Footer />
     </>
   );
 }
 
 export default App;
 
-// const client = new ApolloClient({
-//   uri: '/graphql',
-//   cache: new InMemoryCache(),
-// });
-
-// function App() {
-//   return (
-//     <ApolloProvider client={client}>
-//       <div className="flex-column justify-center align-center min-100-vh bg-primary">
-//         <Navbar />
-//         <div className='container'>
-//         <Outlet />
-//         </div>
-//         <Footer />
-//       </div>
-//     </ApolloProvider>
-//   );
-// }

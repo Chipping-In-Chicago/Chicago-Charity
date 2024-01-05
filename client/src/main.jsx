@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
 //     errorElement: <NotFound />,
-//     children: [
+    children: [
 //       {
 //         index: true,
 //         element: <Home />
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 //         path: '/matchup/:id',
 //         element: <Vote />
 //       },
-//     ],
+    ],
   },
 ]);
 
