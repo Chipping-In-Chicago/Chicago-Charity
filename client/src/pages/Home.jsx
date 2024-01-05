@@ -1,9 +1,10 @@
 import "./css/Home.scss";
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
     <>
-      <h1>Location 1 Current Item List:</h1>
+      <h1>Current Item List:</h1>
       <div className="categories">
         <div>
           <h3> Current number of Medical Items donated:</h3>
@@ -29,7 +30,7 @@ export default function Home() {
             <li>Hats:</li>
           </ul>
         </div>
-        <button className="btn">I need to help</button>
+        <Link to = '/signup' className="btn">I need to help</Link>
       </div>
     </>
   );
