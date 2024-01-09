@@ -64,5 +64,3 @@ export const UPDATE_DONATION_STATUS = gql`
     }
   }
 `;
-
-

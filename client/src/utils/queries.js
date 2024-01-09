@@ -41,4 +41,3 @@ export const QUERY_DONATIONS = gql`
     }
   }
 `;
-
