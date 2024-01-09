@@ -1,12 +1,10 @@
 // import { Link } from 'react-router-dom'
 import './footer.scss'
-import Login from '../../pages/Login'
 
 export default function Footer() {
     return (
         <footer className="footer">
-            <button onClick={Login}> I need to help </button>
+            <a href="https://github.com/Chipping-In-Chicago" target="_blank" rel='noreferrer'>Group name | © 2024</a>
         </footer>
-
     )
 }
