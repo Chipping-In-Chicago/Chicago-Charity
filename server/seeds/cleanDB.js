@@ -1,27 +1,16 @@
-const mongoose = require('mongoose');
 const models = require('../models');
 const db = require('../config/connection');
 
-const cleanDB = async (modelName, collectionName) => {
+module.exports = async (modelName, collectionName) => {
   try {
-    await db;
+    let modelExists = await models[modelName].db.db.listCollections({
+      name: collectionName
+    }).toArray()
 
-    const model = models[modelName];
-
-    if (model) {
-      console.log(`Model ${modelName} found.`);
-      await mongoose.connection.dropDatabase();
-
-      console.log(`Database dropped successfully.`);
-    } else {
-      console.error(`Model ${modelName} not found.`);
+    if (modelExists.length) {
+      await db.dropCollection(collectionName);
     }
   } catch (err) {
-    console.error(`Error cleaning database:`, err.message);
     throw err;
-  } finally {
-    mongoose.connection.close();
   }
-};
-
-module.exports = cleanDB;
+}
