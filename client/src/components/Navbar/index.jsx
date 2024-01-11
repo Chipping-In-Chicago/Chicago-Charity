@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <> 
         <nav className="navbar">
-         <h1 > Chipping In Chicago</h1>
+         <h1> Chipping In Chicago</h1>
             <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
             {/* <Link to='/location'>More Drop-off Locations</Link> */}
