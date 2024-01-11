@@ -35,7 +35,7 @@ export default function Signup() {
             id="email-input"
             type="text"
             value={formData.email}
-            placeholder="Enter your E-Mail address"
+            placeholder="Enter your E-Mail"
             required
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
@@ -48,15 +48,17 @@ export default function Signup() {
           <input
           id='password-input'
           type='text'
+          placeholder="Enter a Password"
           value = {formData.password}
           required
           onChange={(e) => setFormData({...formData, password: e.target.value})}
           >
           </input>
         </div>
-      </form>
-      <button onClick={handleSubmit}>Sign up and help out!</button>
+        <button onClick={handleSubmit}>Sign up and help out!</button>
       <Link to = '/login'>Or Click here to login</Link>
+      </form>
+      
     </>
   );
 }
