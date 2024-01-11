@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 export default function Home() {
   return (
     <>
-      <h1>Current Item List:</h1>
       <div className="categories">
         <div>
           <h3> Current number of Medical Items donated:</h3>
