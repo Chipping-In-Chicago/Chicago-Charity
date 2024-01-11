@@ -5,8 +5,9 @@ h1{
     text-align: center;
     margin: 0px 0px 25px 0;
 }
-.btn{
-    background-color: white;
+.btn:hover{
+    background-color: #ff8080;
+    box-shadow: inset #ff0000;
 }
 .categories{
     text-align: center;
