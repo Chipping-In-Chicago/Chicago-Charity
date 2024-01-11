@@ -7,13 +7,18 @@ h1{
     align-items: center;
     justify-content: center;
 }
+h3{
+    padding-top: 5px;
+    color: white;
+}
 .btn:hover{
-    background-color: #ff8080;
+    background-color: #ff0000;
     box-shadow: inset #ff0000;
 }
 .btn{
     background-color:#ff0000; 
     margin-top: -20px;
+    color: #ff8080;
 }
 .categories{
     text-align: center;
@@ -35,8 +40,10 @@ h1{
     list-style: none;
 }
 .item-list li{
+    padding-top: 10px;
     width: 200px;
     height: 100px;
+    color: white;
     background-color: #ff8080;
     border-radius: 15px;
 }
