@@ -14,9 +14,8 @@ export const QUERY_ITEMS = gql`
   query getItems {
     items {
       _id
-      name
+      itemName
       category
-      // additional item fields
     }
   }
 `;
@@ -37,7 +36,6 @@ export const QUERY_DONATIONS = gql`
       _id
       quantity
       status
-      // additional donation fields
     }
   }
 `;
