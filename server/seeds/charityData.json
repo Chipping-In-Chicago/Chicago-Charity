@@ -2,28 +2,17 @@
     "users": [
       {
         "email": "jirikscotty@gmail.com",
-        "password": "Hello123",
-        "itemsDonating": [1],
-        "location": 1
-      },
-      {
-        "email": "john@gmail.com",
-        "password": "Day12",
-        "itemsDonating": [2],
-        "location": 2
+        "password": "Hello123"
       },
       {
         "email": "mary@gmail.com",
-        "password": "Hi23",
-        "itemsDonating": [3],
-        "location": 3
+        "password": "Hi23"
       },
       {
         "email": "jerry@gmail.com",
-        "password": "2323",
-        "itemsDonating": [4, 5, 6],
-        "location": 4
+        "password": "2323"
       }
+     
     ],
     "items": [
       {
@@ -61,28 +50,6 @@
       {
         "itemName": "hats",
         "category": "clothing"
-      }
-    ],
-    "locations": [
-      {
-        "locationName": "Location Name",
-        "address": "101 Main St.",
-        "items": [1, 2]
-      },
-      {
-        "locationName": "Location Name 2",
-        "address": "202 Main St.",
-        "items": [3]
-      },
-      {
-        "locationName": "Location Name 3",
-        "address": "303 Main St.",
-        "items": [4, 5, 6]
-      },
-      {
-        "locationName": "Location Name 4",
-        "address": "404 Main St.",
-        "items": [7, 8, 9]
       }
     ]
   }

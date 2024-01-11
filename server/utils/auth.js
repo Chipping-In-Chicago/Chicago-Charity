@@ -24,4 +24,3 @@ const authMiddleware = async (context) => {
 };
 
 module.exports = authMiddleware;
-
