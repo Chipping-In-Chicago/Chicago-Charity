@@ -35,7 +35,7 @@ export default function Login() {
             id="email-input"
             type="text"
             value={formData.email}
-            placeholder="Please enter a valid E-Mail address"
+            placeholder="Enter your E-Mail"
             required
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
@@ -54,8 +54,9 @@ export default function Login() {
           >
           </input>
         </div>
+        <button onClick={handleSubmit}>Login In</button>
       </form>
-      <button onClick={handleSubmit}>Sign In</button>
+      
     </>
   );
 }

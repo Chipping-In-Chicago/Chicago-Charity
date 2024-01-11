@@ -41,7 +41,7 @@ export default function Signup() {
               setFormData({ ...formData, email: e.target.value })
             }
           ></input>
-          {isValid ? null : <p>Enter a valid email address.</p>}
+          {isValid ? null : <p>Enter email address.</p>}
         </div>
         <div>
           <label>Password:</label>
