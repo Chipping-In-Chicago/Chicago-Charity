@@ -48,6 +48,7 @@ export default function Login() {
           <input
           id='password-input'
           type='text'
+          placeholder="Enter your Password"
           value = {formData.password}
           required
           onChange={(e) => setFormData({...formData, password: e.target.value})}
