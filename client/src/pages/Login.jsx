@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./css/Signup.scss";
+import "./css/Login.scss";
 import { useState } from "react";
 
 export default function Login() {
