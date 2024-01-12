@@ -1,10 +1,18 @@
+import { useQuery } from "@apollo/client";
 import "./css/Home.scss";
 import { Link } from 'react-router-dom'
+import { QUERY_ITEMS, QUERY_PROFILES } from "../utils/queries";
 
 export default function Home() {
+  const { loading, data } = useQuery(QUERY_ITEMS)
+  console.log('data:', data)
+  console.log('loading:', loading)
+  // const itemList = data?.items || [];
+
   return (
     <>
       <div className="categories">
+            <div>Loading...</div>
         <div>
           <h3> Current number of Medical Items donated:</h3>
           <ul className="item-list">

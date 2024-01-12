@@ -2,42 +2,40 @@ import { gql } from '@apollo/client';
 
 export const QUERY_PROFILES = gql`
   query allProfiles {
-    profiles {
+    getUsers {
       _id
-      name
-      skills
+      email
+      password
     }
   }
 `;
 
 export const QUERY_ITEMS = gql`
   query getItems {
-    items {
+    getItems {
       _id
-      name
+      itemName
       category
-      // additional item fields
     }
   }
 `;
 
-export const QUERY_LOCATIONS = gql`
-  query getLocations {
-    locations {
-      _id
-      name
-      address
-    }
-  }
-`;
+// export const QUERY_LOCATIONS = gql`
+//   query getLocations {
+//     locations {
+//       _id
+//       name
+//       address
+//     }
+//   }
+// `;
 
-export const QUERY_DONATIONS = gql`
-  query getDonations {
-    donations {
-      _id
-      quantity
-      status
-      // additional donation fields
-    }
-  }
-`;
+// export const QUERY_DONATIONS = gql`
+//   query getDonations {
+//     donations {
+//       _id
+//       quantity
+//       status
+//     }
+//   }
+// `;
