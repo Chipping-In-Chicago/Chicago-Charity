@@ -3,7 +3,7 @@ import "./css/Donations.scss";
 export default function Donations() {
   return (
     <>
-      <h1>What would you like to donate today?</h1>
+      <h1 className="question">What would you like to donate today?</h1>
       <div className="donation-categories">
         <div>
           <h2 className="category-name medical">Medical</h2>
@@ -78,6 +78,8 @@ export default function Donations() {
           </select>
         </div>
       </div>
+      <button>Donate</button>
+      <button>Home</button>
     </>
   );
 }

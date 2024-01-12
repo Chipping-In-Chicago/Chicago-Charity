@@ -1,8 +1,11 @@
+.question{
+    padding-top: 100px;
+    color: #ff8080;
+}
 .donation-categories{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    padding: 80px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .category-name{
@@ -16,4 +19,9 @@
 }
 .clothing{
     color: green;
+}
+button{
+    margin: 10px 5px 100px 5px;
+    background-color: #ff8080;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
