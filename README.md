@@ -16,8 +16,12 @@ As a user, I want to donate items to a shelter.
 This screenshot demonstrates the look of our application:
 (Screenshot)
 
-These are the links to our application and our repository:
-(Links)
+These are the links:
+
+Application:
+
+Github Repository: https://github.com/Chipping-In-Chicago/Chicago-Charity
+
 
 ### Sources
 
