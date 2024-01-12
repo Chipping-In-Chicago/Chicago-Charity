@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import "./css/Home.scss";
 import { Link } from 'react-router-dom'
-import { QUERY_ITEMS } from "../utils/queries";
+import { QUERY_ITEMS, QUERY_PROFILES } from "../utils/queries";
 
 export default function Home() {
   const { loading, data } = useQuery(QUERY_ITEMS)
