@@ -50,7 +50,6 @@ export const ADD_DONATION = gql`
       _id
       quantity
       status
-      // additional donation fields
     }
   }
 `;
@@ -60,7 +59,6 @@ export const UPDATE_DONATION_STATUS = gql`
     updateDonationStatus(donationId: $donationId, newStatus: $newStatus) {
       _id
       status
-      // additional donation fields
     }
   }
 `;

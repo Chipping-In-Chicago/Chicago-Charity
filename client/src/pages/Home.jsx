@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <>
       <div className="categories">
-            <div>Loading...</div>
         <div>
           <h3> Current number of Medical Items donated:</h3>
           <ul className="item-list">
