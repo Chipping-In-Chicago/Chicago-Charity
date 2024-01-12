@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./css/Signup.scss";
+import "./css/Login.scss";
 import { useState } from "react";
 
 export default function Login() {
@@ -30,12 +30,12 @@ export default function Login() {
     <>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>E-Mail:</label>
+          <label className="labelEdit">E-Mail:</label>
           <input
             id="email-input"
             type="text"
             value={formData.email}
-            placeholder="Enter your E-Mail address"
+            placeholder="Please enter a valid E-Mail address"
             required
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
@@ -44,7 +44,7 @@ export default function Login() {
           {isValid ? null : <p>Enter a valid email address.</p>}
         </div>
         <div>
-          <label>Password:</label>
+          <label className="labelEdit">Password:</label>
           <input
           id='password-input'
           type='text'
