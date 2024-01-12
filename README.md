@@ -14,10 +14,15 @@ As a user, I want to donate items to a shelter.
 ### Mock Up
 
 This screenshot demonstrates the look of our application:
-(Screenshot)
 
-These are the links to our application and our repository:
-(Links)
+![Screen](<Screenshot 2024-01-11 at 8.34.10 PM.png>)
+
+Here are our links:
+
+Deployed Application:
+
+Github Repository: https://github.com/Chipping-In-Chicago/Chicago-Charity
+
 
 ### Sources
 
