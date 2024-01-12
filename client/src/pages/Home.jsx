@@ -1,11 +1,19 @@
+import { useQuery } from "@apollo/client";
 import "./css/Home.scss";
 import { Link } from 'react-router-dom'
+import { QUERY_ITEMS } from "../utils/queries";
 
 export default function Home() {
+  const { loading, data } = useQuery(QUERY_ITEMS, {
+    fetchPolicy: "no-cache"
+  })
+  console.log('data', data)
+  // const itemList = data?.items || [];
   return (
     <>
-      <h1>Current Item List:</h1>
       <div className="categories">
+            console.log({loading})
+            <div>Loading...</div>
         <div>
           <h3> Current number of Medical Items donated:</h3>
           <ul className="item-list">
@@ -34,4 +42,4 @@ export default function Home() {
       </div>
     </>
   );
-};
+}

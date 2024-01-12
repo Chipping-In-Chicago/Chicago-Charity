@@ -15,10 +15,6 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Item',
   }],
-  location: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Location',
-  },
 });
 
 const User = mongoose.model('User', userSchema);

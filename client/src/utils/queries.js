@@ -1,11 +1,23 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_PROFILES = gql`
-  query allProfiles {
-    profiles {
+export const QUERY_USERS = gql`
+  query allUsers {
+    users {
+      _id
+      username
+      email
+      itemsDonated {
+
+      }
+    }
+  }
+`;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
       _id
       name
-      skills
     }
   }
 `;
@@ -14,9 +26,8 @@ export const QUERY_ITEMS = gql`
   query getItems {
     items {
       _id
-      name
+      itemName
       category
-      // additional item fields
     }
   }
 `;
@@ -37,7 +48,6 @@ export const QUERY_DONATIONS = gql`
       _id
       quantity
       status
-      // additional donation fields
     }
   }
 `;
