@@ -7,21 +7,21 @@ export default function Donations() {
       <div className="donation-categories">
         <div>
           <h2 className="category-name medical">Medical</h2>
-          <label for="feminine-products">Feminine Products</label>
+          <label htmlFor="feminine-products">Feminine Products</label>
           <select name="feminine-products">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <label for="hand-sanitizer">Hand Sanitizer</label>
+          <label htmlFor="hand-sanitizer">Hand Sanitizer</label>
           <select name="hand-sanitizer">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <label for="masks">Masks</label>
+          <label htmlFor="masks">Masks</label>
           <select name="masks">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -31,21 +31,21 @@ export default function Donations() {
         </div>
         <div>
           <h2 className="category-name food">Food</h2>
-          <label for="canned-food">Canned Food</label>
+          <label htmlFor="canned-food">Canned Food</label>
           <select name="canned-food">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <label for="fruit">Fruit</label>
+          <label htmlFor="fruit">Fruit</label>
           <select name="fruit">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <label for="meat">Meat</label>
+          <label htmlFor="meat">Meat</label>
           <select name="meat">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -55,21 +55,21 @@ export default function Donations() {
         </div>
         <div>
           <h2 className="category-name clothing">Clothing</h2>
-          <label for="socks">Socks</label>
+          <label htmlFor="socks">Socks</label>
           <select name="socks">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <label for="underwear">Underwear</label>
+          <label htmlFor="underwear">Underwear</label>
           <select name="underwear">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
-          <label for="hats">Hats</label>
+          <label htmlFor="hats">Hats</label>
           <select name="hats">
             <option value="0">0</option>
             <option value="1">1</option>
