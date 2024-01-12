@@ -16,6 +16,7 @@ export const QUERY_ITEMS = gql`
       _id
       itemName
       category
+      itemCount
     }
   }
 `;
