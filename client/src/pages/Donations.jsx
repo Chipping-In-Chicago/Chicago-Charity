@@ -6,7 +6,7 @@ export default function Donations() {
       <h1>What would you like to donate today?</h1>
       <div className="donation-categories">
         <div>
-          <h2 className="category-name">Medical</h2>
+          <h2 className="category-name medical">Medical</h2>
           <label for="feminine-products">Feminine Products</label>
           <select name="feminine-products">
             <option value="1">1</option>
@@ -27,7 +27,7 @@ export default function Donations() {
           </select>
         </div>
         <div>
-          <h2 className="category-name">Food</h2>
+          <h2 className="category-name food">Food</h2>
           <label for="canned-food">Canned Food</label>
           <select name="canned-food">
             <option value="1">1</option>
@@ -48,7 +48,7 @@ export default function Donations() {
           </select>
         </div>
         <div>
-          <h2 className="category-name">Clothing</h2>
+          <h2 className="category-name clothing">Clothing</h2>
           <label for="socks">Socks</label>
           <select name="socks">
             <option value="1">1</option>
@@ -62,7 +62,7 @@ export default function Donations() {
             <option value="3">3</option>
           </select>
           <label for="hats">Hats</label>
-          <select name="meahatst">
+          <select name="hats">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
