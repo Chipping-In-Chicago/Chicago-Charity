@@ -22,35 +22,43 @@
       },
       {
         "itemName": "hand sanitizer",
-        "category": "hygiene"
+        "category": "hygiene",
+        "itemCount": 4
       },
       {
         "itemName": "mask",
-        "category": "hygiene"
+        "category": "hygiene",
+        "itemCount": 6
       },
       {
         "itemName": "canned food",
-        "category": "food"
+        "category": "food",
+        "itemCount": 8
       },
       {
         "itemName": "fruit",
-        "category": "food"
+        "category": "food",
+        "itemCount": 10
       },
       {
         "itemName": "meat",
-        "category": "food"
+        "category": "food",
+        "itemCount": 12
       },
       {
         "itemName": "socks",
-        "category": "clothing"
+        "category": "clothing",
+        "itemCount": 14
       },
       {
         "itemName": "underwear",
-        "category": "clothing"
+        "category": "clothing",
+        "itemCount": 2
       },
       {
         "itemName": "hats",
-        "category": "clothing"
+        "category": "clothing",
+        "itemCount": 16
       }
     ]
   }
