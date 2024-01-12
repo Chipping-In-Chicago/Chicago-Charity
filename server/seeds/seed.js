@@ -8,11 +8,11 @@ db.once('open', async () => {
   try {
     await cleanDB('User', 'users');
     await cleanDB('Item', 'items');
-    await cleanDB('Location', 'locations');
+    // await cleanDB('Location', 'locations');
 
     await User.create(charityData.users);
     await Item.create(charityData.items);
-    await Location.create(charityData.locations);
+    // await Location.create(charityData.locations);
 
     console.log('Database seeded successfully.');
     process.exit(0);

@@ -11,6 +11,7 @@ type Item {
   _id: ID!
   itemName: String!
   category: String!
+  itemCount: Int
 }
 
 type Location {

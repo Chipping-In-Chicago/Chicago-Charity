@@ -17,7 +17,8 @@
     "items": [
       {
         "itemName": "feminine products",
-        "category": "hygiene"
+        "category": "hygiene",
+        "itemCount": 2
       },
       {
         "itemName": "hand sanitizer",
