@@ -4,6 +4,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
+    position: fixed;
     min-height: 60px;
     gap: 30px;
     a {
@@ -21,9 +23,11 @@
         box-shadow: inset 100px 0 0 0 red;
     }
     h1{
-        color:white;
+        color: #ff8080;
         text-align: center;
+        margin-top: 5px;
         margin-left: .5em;
+        padding-top: 10px;
     }
     
 }

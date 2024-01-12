@@ -35,28 +35,30 @@ export default function Signup() {
             id="email-input"
             type="text"
             value={formData.email}
-            placeholder="Enter your E-Mail address"
+            placeholder="Enter your E-Mail"
             required
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
           ></input>
-          {isValid ? null : <p>Enter a valid email address.</p>}
+          {isValid ? null : <p>Enter email address.</p>}
         </div>
         <div>
           <label>Password:</label>
           <input
           id='password-input'
           type='text'
+          placeholder="Enter a Password"
           value = {formData.password}
           required
           onChange={(e) => setFormData({...formData, password: e.target.value})}
           >
           </input>
         </div>
-      </form>
-      <button onClick={handleSubmit}>Sign up and help out!</button>
+        <button onClick={handleSubmit}>Sign up and help out!</button>
       <Link to = '/login'>Or Click here to login</Link>
+      </form>
+      
     </>
   );
 }
