@@ -53,12 +53,12 @@
       {
         "itemName": "underwear",
         "category": "clothing",
-        "itemCount": 2
+        "itemCount": 16
       },
       {
         "itemName": "hats",
         "category": "clothing",
-        "itemCount": 16
+        "itemCount": 18
       }
     ]
   }
