@@ -8,7 +8,7 @@ export default function Home() {
   console.log('data:', data)
   console.log('loading:', loading)
   const item = data?.getItems || [];
-  console.log({item})
+  console.log(item)
 
 
   return (
