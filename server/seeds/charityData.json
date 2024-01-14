@@ -17,17 +17,17 @@
     "items": [
       {
         "itemName": "feminine products",
-        "category": "hygiene",
+        "category": "medical",
         "itemCount": 2
       },
       {
         "itemName": "hand sanitizer",
-        "category": "hygiene",
+        "category": "medical",
         "itemCount": 4
       },
       {
         "itemName": "mask",
-        "category": "hygiene",
+        "category": "medical",
         "itemCount": 6
       },
       {

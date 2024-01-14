@@ -4,7 +4,7 @@ const resolvers = {
   Query: {
     getUsers: async () => {
       try {
-        return await User.find().populate('itemsDonating').populate('location');
+        return await User.find().populate('itemsDonating').sort({ category: 1}).populate('location');
       } catch (error) {
         console.error('Error in getUsers resolver:', error);
         throw error;
