@@ -12,7 +12,7 @@ const resolvers = {
     },
     getItems: async () => {
       try {
-        return await Item.find();
+        return await Item.find().sort({ category: -1});
       } catch (error) {
         console.error('Error in getItems resolver:', error);
         throw error;
