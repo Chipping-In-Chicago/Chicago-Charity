@@ -31,6 +31,7 @@ type Mutation {
   createUser(input: UserInput): User
   createItem(input: ItemInput): Item
   createLocation(input: LocationInput): Location
+  loginUser(email: String!, password: String!): Auth
 }
 
 input UserInput {
@@ -46,6 +47,11 @@ input ItemInput {
 input LocationInput {
   locationName: String!
   address: String
+}
+
+type Auth {
+  token: ID!
+  user: User
 }
 `;
 module.exports = typeDefs;
