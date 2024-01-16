@@ -14,12 +14,14 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    // Verifying Email Address
-    const inputEmail = formData.email;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const validEmail = emailRegex.test(inputEmail);
-    setIsValid(validEmail);
-    //Clearing Fields
+    // // Verifying Email Address
+    // const inputEmail = formData.email;
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // const validEmail = emailRegex.test(inputEmail);
+    // setIsValid(validEmail);
+    // //Clearing Fields
+
+    
     setFormData({
       email: "",
       password: "",
