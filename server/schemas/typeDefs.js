@@ -31,6 +31,7 @@ type Mutation {
   createUser(input: UserInput): User
   createItem(input: ItemInput): Item
   createLocation(input: LocationInput): Location
+  updateItemCount(_id: ID!, itemCount: Int!): Item
 }
 
 input UserInput {

@@ -1,5 +1,7 @@
+import { useMutation } from "@apollo/client";
 import "./css/Donations.scss";
 import { useState, useEffect } from 'react';
+import { UPDATE_ITEM_COUNT } from "../utils/mutations";
 
 export default function Donations() {
 
@@ -14,6 +16,19 @@ const [selectedValues, setSelectedValues] = useState({
   underwear: '0',
   hats: '0'
 });
+
+const [updateItemCount] = useMutation(UPDATE_ITEM_COUNT)
+
+const handleUpdateItem = (_id, itemName, category, itemCount) => {
+  updateItemCount({
+    variables: {
+      _id: _id,
+      itemName: itemName,
+      category: category,
+      itemCount: itemCount
+    }
+  })
+}
 
 
 useEffect(() => {
@@ -110,7 +125,7 @@ const handleDropdownChange = (e, dropdownName) => {
           </select>
         </div>
       </div>
-      <button>Donate</button>
+      <button onSubmit={handleUpdateItem}>Donate</button>
       <button>Home</button>
       </form>
     </>
