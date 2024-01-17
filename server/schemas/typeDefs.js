@@ -4,7 +4,6 @@ type User {
   email: String!
   password: String!
   itemsDonating: [Item]
-  location: Location
 }
 
 type Item {
@@ -32,6 +31,7 @@ type Mutation {
   createItem(input: ItemInput): Item
   createLocation(input: LocationInput): Location
   updateItemCount(_id: ID!, itemCount: Int!): Item
+  loginUser(email: String!, password: String!): Auth
 }
 
 input UserInput {
@@ -47,6 +47,11 @@ input ItemInput {
 input LocationInput {
   locationName: String!
   address: String
+}
+
+type Auth {
+  token: ID!
+  user: User
 }
 `;
 module.exports = typeDefs;

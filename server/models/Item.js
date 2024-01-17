@@ -12,6 +12,7 @@ const itemSchema = new mongoose.Schema({
   },
   itemCount: {
     type: Number,
+    require: true
   }
 });
 

@@ -20,6 +20,8 @@ export default function Signup() {
     const validEmail = emailRegex.test(inputEmail);
     setIsValid(validEmail);
     //Clearing Fields
+
+    
     setFormData({
       email: "",
       password: "",
