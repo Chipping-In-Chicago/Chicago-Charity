@@ -11,6 +11,7 @@ export default function Navbar() {
             <Link to='/about'>About</Link>
             {/* <Link to='/location'>More Drop-off Locations</Link> */}
             <Link to='/login'>Login</Link>
+            <Link to ='/donations'>Donations</Link>
         </nav>
         </>
     )
