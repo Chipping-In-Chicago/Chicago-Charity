@@ -18,25 +18,25 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('form data in submit', formData);
+    console.log('form data on submit', formData);
     // // Verifying Email Address
     // const inputEmail = formData.email;
     // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // const validEmail = emailRegex.test(inputEmail);
     // setIsValid(validEmail);
-    
+
     try {
       const { data } = await loginUser({
         variables: { ...formData },
       });
       console.log('login data', data)
-      
+
       Auth.login(data.loginUser.token);
-      
+
     } catch (err) {
       console.error(err);
     }
-    
+
     //Clearing Fields
     setFormData({
       email: "",
@@ -46,38 +46,36 @@ const Login = () => {
 
   return (
     < >
-      
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label className="labelEdit">E-Mail:</label>
-            <input
-              id="email-input"
-              type="text"
-              placeholder="Enter your E-Mail"
-              value={formData.email}
-              required
-              // onChange={handleInputChange}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            ></input>
-            {/* {isValid ? null : <p>Enter a valid email address.</p>} */}
-          </div>
-          <div>
-            <label className="labelEdit">Password:</label>
-            <input
-              id='password-input'
-              type='text'
-              placeholder="Enter your Password"
-              value={formData.password}
-              required
-              // onChange={handleInputChange}
-              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
 
-            >
-            </input>
-          </div>
-          <button type="submit">Login In</button>
-        </form>
-        {error && (<div>{error.message}</div>)}
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label className="labelEdit" htmlFor="email-input">E-Mail:</label>
+          <input
+            id="email-input"
+            type="text"
+            placeholder="Enter your E-Mail"
+            value={formData.email}
+            required
+            // onChange={handleInputChange}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          />
+          {/* {isValid ? null : <p>Enter a valid email address.</p>} */}
+        </div>
+        <div>
+          <label className="labelEdit" htmlFor='password-input'>Password:</label>
+          <input
+            id='password-input'
+            type='text'
+            placeholder="Enter your Password"
+            value={formData.password}
+            required
+            // onChange={handleInputChange}
+            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+          />
+        </div>
+        <button type="submit">Login In</button>
+      </form>
+      {error && (<div>{error.message}</div>)}
     </>
   );
 };

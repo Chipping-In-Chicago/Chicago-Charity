@@ -72,13 +72,18 @@ const resolvers = {
       }
     },
     loginUser: async (parent, { email, password }) => {
+      console.log('at resolver', email);
+      console.log('at resolver', password);
+
       const user = await User.findOne({ email });
+      console.log('at resolver user found', user);
 
       if (!user) {
         throw AuthenticationError;
       }
 
       const correctPw = await user.isCorrectPassword(password);
+      console.log('at resolver password match?', correctPw);
 
       if (!correctPw) {
         throw AuthenticationError;

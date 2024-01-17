@@ -4,7 +4,6 @@ type User {
   email: String!
   password: String!
   itemsDonating: [Item]
-  location: Location
 }
 
 type Item {
