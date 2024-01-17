@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './navbar.scss'
+import './Navbar.scss'
 // import Auth from '../../utils/auth';
 
 export default function Navbar() {
