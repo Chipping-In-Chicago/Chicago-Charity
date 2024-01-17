@@ -7,7 +7,7 @@ import { LOGIN_USER } from "../utils/mutations";
 const Login = () => {
   //Form Data
   const [formData, setFormData] = useState({ email: "", password: "" });
-  const [isValid, setIsValid] = useState(true);
+  // const [isValid, setIsValid] = useState(true);
   const [loginUser, { error }] = useMutation(LOGIN_USER);
 
   // const handleInputChange = (event) => {
@@ -19,11 +19,11 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('form data in submit', formData);
-    // Verifying Email Address
-    const inputEmail = formData.email;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const validEmail = emailRegex.test(inputEmail);
-    setIsValid(validEmail);
+    // // Verifying Email Address
+    // const inputEmail = formData.email;
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // const validEmail = emailRegex.test(inputEmail);
+    // setIsValid(validEmail);
     
     try {
       const { data } = await loginUser({
@@ -59,7 +59,7 @@ const Login = () => {
               // onChange={handleInputChange}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             ></input>
-            {isValid ? null : <p>Enter a valid email address.</p>}
+            {/* {isValid ? null : <p>Enter a valid email address.</p>} */}
           </div>
           <div>
             <label className="labelEdit">Password:</label>
