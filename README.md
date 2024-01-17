@@ -19,7 +19,7 @@ This screenshot demonstrates the look of our application:
 
 Here are our links:
 
-Deployed Application:
+Deployed Application: https://chicago-charity-render.onrender.com
 
 Github Repository: https://github.com/Chipping-In-Chicago/Chicago-Charity
 
