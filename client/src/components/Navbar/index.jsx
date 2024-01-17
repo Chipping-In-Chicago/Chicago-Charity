@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './navbar.scss'
+import './Navbar.scss'
 // import Auth from '../../utils/auth';
 
 export default function Navbar() {
@@ -11,6 +11,7 @@ export default function Navbar() {
             <Link to='/about'>About</Link>
             {/* <Link to='/location'>More Drop-off Locations</Link> */}
             <Link to='/login'>Login</Link>
+            <Link to ='/donations'>Donations</Link>
         </nav>
         </>
     )
