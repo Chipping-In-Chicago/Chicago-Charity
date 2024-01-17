@@ -63,3 +63,15 @@ export const UPDATE_DONATION_STATUS = gql`
     }
   }
 `;
+
+export const UPDATE_ITEM_COUNT = gql `
+mutation updateItemCount($id: ID, $newcount: Int) {
+  updateItemCount(_id: $id, newcount: $newcount) {
+    _id
+    itemCount
+    itemName
+    category
+  }
+}
+
+`
