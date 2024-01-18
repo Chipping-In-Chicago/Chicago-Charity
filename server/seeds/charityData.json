@@ -1,7 +1,7 @@
 {
     "users": [
       {
-        "email": "jirikscotty@gmail.com",
+        "email": "user@gmail.com",
         "password": "Hello123",
         "itemsDonating": ["659f4f8083d30b0d7e0db325"]
       },
@@ -12,6 +12,10 @@
       {
         "email": "jerry@gmail.com",
         "password": "2323"
+      },
+      {
+        "email": "email@email.com",
+        "password": "Password"
       }
      
     ],
