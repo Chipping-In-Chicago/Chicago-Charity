@@ -73,7 +73,7 @@ const Login = () => {
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           />
         </div>
-        <button type="submit">Login In</button>
+        <button type="submit">Login</button>
       </form>
       {error && (<div>{error.message}</div>)}
     </>
