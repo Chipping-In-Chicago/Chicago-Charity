@@ -1,66 +1,91 @@
 import { Link } from "react-router-dom";
 import "./css/Signup.scss";
 import { useState } from "react";
+import Auth from "../utils/auth";
+import { useMutation } from "@apollo/client";
+import { CREATE_USER } from "../utils/mutations";
 
 export default function Signup() {
   //Form Data
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+  const [formState, setFormState] = useState({
+    email: '',
+    password: '',
   });
+  const [addUser, { error, data }] = useMutation(CREATE_USER);
 
-  const [isValid, setIsValid] = useState(true);
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    // Verifying Email Address
-    const inputEmail = formData.email;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const validEmail = emailRegex.test(inputEmail);
-    setIsValid(validEmail);
-    //Clearing Fields
-
-    
-    setFormData({
-      email: "",
-      password: "",
+    setFormState({
+      ...formState,
+      [name]: value,
     });
   };
 
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(data);
+
+    try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.createUser.token);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+    
+    // const [isValid, setIsValid] = useState(true);
+    
+    // Verifying Email Address
+    // const inputEmail = formData.email;
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // const validEmail = emailRegex.test(inputEmail);
+    // setIsValid(validEmail);
+    //Clearing Fields
+
+    // setFormData({
+    //   email: "",
+    //   password: "",
+    // });
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleFormSubmit}>
         <div>
           <label>E-Mail:</label>
           <input
             id="email-input"
-            type="text"
-            value={formData.email}
-            placeholder="Enter your E-Mail"
-            required
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
+            placeholder="Your email"
+            name="email"
+            type="email"
+            value={formState.email}
+            onChange={handleChange}
           ></input>
-          {isValid ? null : <p>Enter email address.</p>}
+          {/* {isValid ? null : <p>Enter email address.</p>} */}
         </div>
         <div>
           <label>Password:</label>
           <input
           id='password-input'
-          type='text'
-          placeholder="Enter a Password"
-          value = {formData.password}
-          required
-          onChange={(e) => setFormData({...formData, password: e.target.value})}
+          placeholder="******"
+          name="password"
+          type="password"
+          value={formState.password}
+          onChange={handleChange}
           >
           </input>
         </div>
-        <button onClick={handleSubmit}>Sign up and help out!</button>
+        <button onClick={handleFormSubmit}>Sign up and help out!</button>
       <Link to = '/login'>Or Click here to login</Link>
       </form>
-      
+      {error && (
+              <div className="my-3 p-3 bg-danger text-white">
+                {error.message}
+              </div>
+            )}
     </>
   );
 }

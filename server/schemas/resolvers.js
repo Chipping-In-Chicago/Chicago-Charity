@@ -29,13 +29,10 @@ const resolvers = {
     },
   },
   Mutation: {
-    createUser: async (_, { input }) => {
-      try {
-        return await User.create(input);
-      } catch (error) {
-        console.error("Error in createUser resolver:", error);
-        throw error;
-      }
+    createUser: async (parent, { email, password }) => {
+      const user = await User.create({ email, password });
+      const token = signToken(user);
+      return { token, user };
     },
     createItem: async (_, { input }) => {
       try {

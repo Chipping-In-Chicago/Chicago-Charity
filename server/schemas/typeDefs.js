@@ -27,7 +27,7 @@ type Query {
 }
 
 type Mutation {
-  createUser(input: UserInput): User
+  createUser(email: String!, password: String!): Auth
   createItem(input: ItemInput): Item
   createLocation(input: LocationInput): Location
   updateItemCount(_id: ID!, itemCount: Int!): Item
